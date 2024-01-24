@@ -2,7 +2,7 @@ snake-game
 
 ## Deployed URL
 
-???
+https://snake-game-anastasia.vercel.app/
 
 ## Requested Features
 
