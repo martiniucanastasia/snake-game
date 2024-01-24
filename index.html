@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/snake.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Play the classic." />
+    <meta name="keywords" content="Snake Game, Classic Snake, HTML5 Game" />
+    <meta name="author" content="Anastasia" />
+    <title>Snake</title>
+  </head>
+  <body style="visibility: hidden">
+    <div>
+      <div class="score-wrapper">
+        <a
+          class="github"
+          href="https://github.com/martiniucanastasia"
+          target="_blank"
+          rel="noopener"
+          >Github</a
+        >
+        <span class="score" id="score">0</span>
+      </div>
+      <div class="wrapper">
+        <div id="board" class="board"></div>
+      </div>
+    </div>
+    <button type="button" id="start-button" class="start-button">EAT!</button>
+    <img class="logo" id="logo" src="/snake.png" alt="snake-logo" />
+    <script type="module" src="/src/main.ts" defer></script>
+  </body>
+</html>

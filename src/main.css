@@ -1,0 +1,111 @@
+:root {
+  --primary-color: #17ff36;
+  --secondary-color: #ff8af3;
+  --background-color: #3c7741;
+  --score-color: #c2ed4c;
+  --black: #111111;
+  --white: #ffffff;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  display: flex;
+  place-items: center;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  min-height: 100vh;
+  background-color: var(--black);
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(50, 0.8rem);
+  grid-template-rows: repeat(50, 0.8rem);
+}
+
+.wrapper {
+  background-color: var(--background-color);
+  border: var(--secondary-color) solid 0.5rem;
+  border-radius: 2rem;
+}
+
+.score-wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  .github {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin: 0.5rem 0;
+    color: var(--score-color);
+  }
+
+  .score {
+    color: var(--score-color);
+    opacity: 0;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin: 0.5rem 0;
+    transition: opacity 0.3s;
+  }
+}
+
+.snake {
+  background-color: var(--primary-color);
+  border: 1px solid var(--black);
+}
+
+.food {
+  background-color: var(--secondary-color);
+  border: 1px solid var(--black);
+}
+
+.logo {
+  position: absolute;
+  width: 20vmin;
+  height: 20vmin;
+  opacity: 1;
+  transition: opacity 0.3s;
+  animation: logo-pulse 2s infinite;
+}
+
+.start-button {
+  position: absolute;
+  bottom: 20%;
+  z-index: 1;
+  border: none;
+  background-color: var(--black);
+  color: var(--white);
+  padding: 1rem 2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s;
+  }
+}
+
+@keyframes logo-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
